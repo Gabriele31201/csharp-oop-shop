@@ -2,11 +2,43 @@
 
 string numero = "tre";
 
-Product oggettoMaglia = new Product ("maglia blu");
-Console.WriteLine ("il codice del prodotto è: " + oggettoMaglia.getCode());
+Product oggettoMaglia = new Product ("maglia", "maglia a maniche corte blu");
+Console.WriteLine ("IL CODICE DEL PRODOTTO E: " + oggettoMaglia.getCode());
+Console.WriteLine ("IL NOSTRO PRODOTTO E UNA: " + oggettoMaglia.getName());
+Console.WriteLine(oggettoMaglia.getDescription());
 
-oggettoMaglia.setName("maglia verde");
-Console.WriteLine(oggettoMaglia.getInfo());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
