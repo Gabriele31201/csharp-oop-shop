@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 namespace myProduct
 {
     public class Product
-    {                                                                                                        
+    {
         // ATTRIBUTI
 
+        private int randomNumber;
         private int code;
         private string name;
         private string description;
@@ -21,26 +22,35 @@ namespace myProduct
         
         
         // COSTRUTTORE
-        public Product(string name, string description)
+        public Product(string name, string description, int code)
         {
             this.name = name;
-            code = 123445567;
+            this.code = code + randomNumber;
             this.description = description;
             price = 16.39f;
             ivaPrice =  (price * 0.22f) + price;
             codeName = code + name;
+            
         }
 
-       
+
 
         // METODI   
 
-
-
-        public int getCode()
+      
+        public int getRandomCode()
         {
-       
+            
             return code;
+        }
+
+
+        public int getRandomNumber()
+        {
+            Random rnd = new Random();
+            int randomNumber = rnd.Next(1, 9);
+
+            return randomNumber;
         }
 
 
