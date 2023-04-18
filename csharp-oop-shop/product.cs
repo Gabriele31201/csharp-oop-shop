@@ -13,6 +13,9 @@ namespace myProduct
         private int code;
         private string name;
         private string description;
+        private float price;
+        private double ivaPrice;
+        private string codeName;
 
         
         
@@ -23,9 +26,16 @@ namespace myProduct
             this.name = name;
             code = 123445567;
             this.description = description;
+            price = 16.39f;
+            ivaPrice =  (price * 0.22f) + price;
+            codeName = code + name;
         }
 
+       
+
         // METODI   
+
+
 
         public int getCode()
         {
@@ -43,14 +53,24 @@ namespace myProduct
         public string getDescription()
         {
             return "DESCRIZIONE PRODOTTO: " + description;
+
         }
 
-        
+        public float getPrice()
+        {
+            return price;
+        }        
 
 
+        public double getIvaPrice()
+        {
+            return ivaPrice = Math.Round(ivaPrice, 2);
+        }
 
-
-
+        public string getCodeName()
+        {
+            return codeName;
+        }
   
 
 
